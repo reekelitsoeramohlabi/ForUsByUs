@@ -1,0 +1,2 @@
+Place your local MP4 video file named 'sample-trailer.mp4' inside this folder.
+If omitted, the video player automatically plays open-source sample MP4 trailers over HTTPS.

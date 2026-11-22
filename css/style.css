@@ -1,0 +1,150 @@
+/* Custom CSS Variables & Theme Palette */
+:root {
+  --bg-dark: #0b0f19;
+  --bg-nav: #111827;
+  --bg-card: #182032;
+  --accent-color: #f59e0b; /* Warm Amber/Gold */
+  --accent-hover: #d97706;
+  --text-muted-custom: #9ca3af;
+}
+
+/* Global Reset & Box Model */
+* {
+  box-sizing: border-box;
+}
+
+body.bg-dark-custom {
+  background-color: var(--bg-dark);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden; /* Prevents horizontal overflow on mobile */
+}
+
+.bg-nav-custom {
+  background-color: var(--bg-nav);
+}
+
+.bg-card-custom {
+  background-color: var(--bg-card);
+}
+
+.text-light-muted {
+  color: var(--text-muted-custom);
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
+}
+
+/* Brand Logo & Buttons */
+.brand-logo {
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+}
+
+.brand-accent {
+  color: var(--accent-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+  color: #0b0f19;
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: #0b0f19;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--accent-hover);
+  color: #0b0f19;
+  transform: translateY(-1px);
+}
+
+/* Hero Banner */
+.hero-banner {
+  min-height: 60vh;
+  background: linear-gradient(90deg, rgba(11, 15, 25, 0.95) 35%, rgba(11, 15, 25, 0.45) 100%),
+              url('../assets/posters/poster1.jpg') center/cover no-repeat,
+              radial-gradient(circle at top right, #1e293b, #0b0f19);
+  border-bottom: 1px solid #374151;
+}
+
+/* Media Cards & Hover States */
+.media-card {
+  background-color: var(--bg-card);
+  border: 1px solid #2d3748;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.media-card:hover,
+.media-card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.poster-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background-color: #1f2937;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-badge-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 15, 25, 0.85);
+  color: var(--accent-color);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.media-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .hero-slide {
+    min-height: 52vh;
+    text-align: left;
+  }
+
+  .hero-slide h1,
+  .hero-slide h2 {
+    font-size: 2rem;
+  }
+
+  #heroCarousel .carousel-control-prev,
+  #heroCarousel .carousel-control-next {
+    width: 10%;
+  }
+}
